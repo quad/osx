@@ -7,4 +7,6 @@ dep 'laptop' do
   requires 'alfred cask integration'
 
   requires 'sporkd:osx computer name set'.with computer_name: 'rabi', local_hostname: 'rabi'
+
+  requires 'vim'
 end
