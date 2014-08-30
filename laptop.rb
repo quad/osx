@@ -13,7 +13,6 @@ CASKS=%w{
   alfred
   box-sync
   caffeine
-  geektool
   google-chrome
   iterm2
   macvim
@@ -25,7 +24,6 @@ CASKS=%w{
   the-unarchiver
   vagrant
   virtualbox
-  vlc
 }
 
 BREWS.each do |cask|
