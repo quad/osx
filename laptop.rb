@@ -2,6 +2,8 @@ dep 'laptop' do
   BREWS.each { |c| requires "#{c}.managed" }
   CASKS.each { |c| requires "#{c}.cask" }
   requires 'alfred cask integration'
+
+  requires 'sporkd:osx computer name set'.with computer_name: 'rabi', local_hostname: 'rabi'
 end
 
 BREWS=%w{
