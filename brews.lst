@@ -1,1 +1,6 @@
 ack
+git
+heroku-toolbelt:heroku
+rbenv
+ruby-build
+youtube-dl
