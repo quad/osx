@@ -1,7 +1,7 @@
 ack
 git
 heroku-toolbelt:heroku
-maven
+maven:mvn
 postgresql:postgres
 rbenv
 ruby-build
