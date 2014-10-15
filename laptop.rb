@@ -15,4 +15,5 @@ dep 'laptop' do
   requires 'sporkd:osx computer name set'.with computer_name: 'rabi', local_hostname: 'rabi'
 
   requires 'vim'
+  requires 'sourcetree'
 end
