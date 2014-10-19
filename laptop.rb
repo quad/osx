@@ -16,4 +16,13 @@ dep 'laptop' do
 
   requires 'vim'
   requires 'sourcetree'
+  requires 'hidden dock'
+end
+
+dep 'hidden dock' do
+  met? { `defaults read com.apple.dock autohide`.strip == "1" }
+  meet {
+    shell 'defaults write com.apple.dock autohide -boolean true'
+    shell 'killall -u `whoami` Dock'
+  }
 end
