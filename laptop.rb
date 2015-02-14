@@ -13,6 +13,7 @@ dep 'laptop' do
 
   requires 'sporkd:osx computer name set'.with computer_name: 'nathalia', local_hostname: 'nathalia'
 
+  requires 'gitconfig'
   requires 'vim'
   requires 'sourcetree'
   requires 'hidden dock'
