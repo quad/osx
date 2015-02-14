@@ -6,5 +6,5 @@ dep 'sourcetree license.copy' do
   requires 'sourcetree.cask'
 
   source 'sourcetree.license'
-  target '~/Library/Application Support/SourceTree/sourcetree.license'
+  target '~/Library/Application Support/SourceTree/'
 end
