@@ -10,7 +10,6 @@ casks.each { |n, p| p['cask'] }
 dep 'laptop' do
   brews.each { |n, p| requires "#{n}.managed" }
   casks.each { |n, p| requires "#{n}.cask" }
-  requires 'alfred cask integration'
 
   requires 'sporkd:osx computer name set'.with computer_name: 'rabi', local_hostname: 'rabi'
 
