@@ -1,11 +1,6 @@
 ack
 git
 heroku-toolbelt:heroku
-maven:mvn
-postgresql:postgres
 rbenv
 ruby-build
-sbt
-scala
 todo-txt:todo.sh
-youtube-dl
