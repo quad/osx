@@ -1,4 +1,6 @@
 ack
+boot2docker
+docker
 git
 heroku-toolbelt:heroku
 rbenv
