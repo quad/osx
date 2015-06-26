@@ -1,8 +1,11 @@
 ack
 boot2docker
 docker
+fish
 git
 heroku-toolbelt:heroku
+maven:mvn
+node
 rbenv
 ruby-build
-todo-txt:todo.sh
+rust:rustc
