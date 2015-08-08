@@ -17,6 +17,9 @@ dep 'laptop' do
   requires 'vim'
   requires 'sourcetree'
   requires 'hidden dock'
+
+  requires 'ssh private key'
+  requires 'ssh passphrase in keychain'
 end
 
 dep 'hidden dock' do
@@ -25,4 +28,26 @@ dep 'hidden dock' do
     shell 'defaults write com.apple.dock autohide -boolean true'
     shell 'killall -u `whoami` Dock'
   }
+end
+
+dep 'ssh private key' do
+  def keyfile
+    '~/.ssh/id_rsa'.p
+  end
+
+  met? { keyfile.exists? }
+  meet {
+    require 'securerandom'
+    puts "Here's a passphrase: #{SecureRandom.hex}"
+    shell "ssh-keygen -f #{keyfile}"
+  }
+end
+
+dep 'ssh passphrase in keychain' do
+  def keyfile
+    '~/.ssh/id_rsa'.p
+  end
+
+  met? { shell? "security find-generic-password -s SSH -a #{keyfile}" }
+  meet { shell "ssh-add -K #{keyfile}" }
 end
