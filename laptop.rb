@@ -11,7 +11,7 @@ dep 'laptop' do
   brews.each { |n, p| requires "#{n}.managed" }
   casks.each { |n, p| requires "#{n}.cask" }
 
-  requires 'sporkd:osx computer name set'.with computer_name: 'nathalia', local_hostname: 'nathalia'
+  requires 'sporkd:osx computer name set'.with computer_name: 'qian', local_hostname: 'qian'
 
   requires 'gitconfig'
   requires 'vim'
