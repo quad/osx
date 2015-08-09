@@ -5,10 +5,10 @@ end
 
 dep 'email.gitconfig' do
   key 'user.email'
-  value 'sr@thoughtworks.com'
+  value 'scott@quadhome.com'
 end
 
 dep 'name.gitconfig' do
   key 'user.name'
-  value 'sr@thoughtworks.com'
+  value 'Scott Robinson'
 end
