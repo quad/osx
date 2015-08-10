@@ -1,0 +1,2 @@
+language: objective-c # but not really
+script: ./bootstrap.sh
