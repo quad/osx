@@ -21,6 +21,8 @@ dep 'laptop' do
 
   requires 'ssh private key'
   requires 'ssh passphrase in keychain'
+
+  requires 'filevault'
 end
 
 dep 'hidden dock' do
@@ -51,4 +53,9 @@ dep 'ssh passphrase in keychain' do
 
   met? { shell? "security find-generic-password -s SSH -a #{keyfile}" }
   meet { shell "ssh-add -K #{keyfile}" }
+end
+
+dep 'filevault' do
+  met? { `fdesetup status`.strip != 'FileVault is Off.' }
+  meet { sudo "fdesetup enable -user #{`whoami`}" }
 end
