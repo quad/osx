@@ -56,6 +56,6 @@ dep 'ssh passphrase in keychain' do
 end
 
 dep 'filevault' do
-  met? { `fdesetup status`.strip != 'FileVault is Off.' }
+  met? { `fdesetup status`.include? 'is On' }
   meet { sudo "fdesetup enable -user #{`whoami`}" }
 end
