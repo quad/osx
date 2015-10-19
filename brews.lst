@@ -1,7 +1,10 @@
 ack
+android-platform-tools:adb
 fish
 git
 go
 rbenv
 ruby-build
 rust:rustc
+todo-txt:todo.sh
+youtube-dl
